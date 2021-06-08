@@ -1,5 +1,5 @@
 //PS3.js created by Misakiii
-//Version 1.0.0
+//Version 1.0.0 
 
 var PS3IP = "192.";
 var PROCESS = "17105408";
