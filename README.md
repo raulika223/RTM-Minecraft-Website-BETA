@@ -14,5 +14,4 @@ if it's now working, check on your WebMAN settings if you have the PS3MAPI enabl
 
 Credits: Misakiiii (Website, PS3.js) MiniWolfy (HTML, help with JS)
 
-
-https://i.imgur.com/bFYv4yh.png
+![alt text](https://i.imgur.com/3ubQwua.png)
