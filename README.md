@@ -13,3 +13,6 @@ you can now using the website like a RTM enter your PS3 IP press connect and eve
 if it's now working, check on your WebMAN settings if you have the PS3MAPI enabled.
 
 Credits: Misakiiii (Website, PS3.js) MiniWolfy (HTML, help with JS)
+
+
+https://i.imgur.com/bFYv4yh.png
