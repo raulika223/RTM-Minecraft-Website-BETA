@@ -11,3 +11,5 @@ a console will show you all IP localhost can be access for the website, connect 
 Enjoy ! 
 you can now using the website like a RTM enter your PS3 IP press connect and everything should working
 if it's now working, check on your WebMAN settings if you have the PS3MAPI enabled.
+
+Credits: Misakiiii, MiniWolfy
