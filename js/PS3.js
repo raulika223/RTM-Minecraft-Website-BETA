@@ -1,36 +1,30 @@
 //PS3.js created by Misakiii
-//Version 1.0.0 
+//Version 1.0.1 
 
 var PS3IP = "192.";
 var PROCESS = "17105408";
 
-//#region > WEBHOOK DISCORD
+//#region > FUNCTIONS PS3LIB 
 
 function SendWebHook(url, username, avatar, content)
 {
-    fetch(
-        url,
-        {
-          method: 'post',
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          body: JSON.stringify({
-
-            username: username,
-            avatar_url:
-              avatar,
-
-            content:
-              content,
-          }),
-        }
-      );
+  fetch(
+    url,
+    {
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json',
+      },
+      body: JSON.stringify({
+        username: username,
+        avatar_url:
+        avatar,
+        content:
+        content,
+      }),
+    }
+  );
 }
-
-//#endregion
-
-//#region > FUNCTIONS PS3LIB 
 
 function GetIP(IP)
 {
@@ -93,5 +87,62 @@ function INSTANT_DAMAGE(toggle)
     DoNotif("Instant Damage: Disabled")
   }
 }
+
+function KNOCKBACK(toggle)
+{
+  if (toggle === 1)
+  {
+    WriteMemory("0x003A4018", "40 80")
+    DoNotif("Knockback: Enabled")
+  }
+  else if (toggle === 0)
+  {
+    WriteMemory("0x003A4018", "3E CC")
+    DoNotif("Knockback: Disabled")
+  }
+}
+
+function SUPER_JUMP(toggle)
+{
+  if (toggle === 1)
+  {
+    WriteMemory("0x003AA77C", "3F 47 7F 42")
+    DoNotif("Super Jump: Enabled")
+  }
+  else if (toggle === 0)
+  {
+    WriteMemory("0x003AA77C", "3E D7 0A 3D")
+    DoNotif("Super Jump: Disabled")
+  }
+}
+
+function NIGHT_VISION(toggle)
+{
+  if (toggle === 1)
+  {
+    WriteMemory("0x00A9A6C8", "7F")
+    DoNotif("Night Vision: Enabled")
+  }
+  else if (toggle === 0)
+  {
+    WriteMemory("0x00A9A6C8", "3F")
+    DoNotif("Night Vision: Disabled")
+  }
+}
+
+function SUPER_SPEED(toggle)
+{
+  if (toggle === 1)
+  {
+    WriteMemory("0x003ABD49", "FF FF FF")
+    DoNotif("Super Speed: Enabled")
+  }
+  else if (toggle === 0)
+  {
+    WriteMemory("0x003ABD49", "26 AD 89")
+    DoNotif("Super Speed: Disabled")
+  }
+}
+
 
 //#endregion
